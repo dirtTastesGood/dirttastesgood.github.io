@@ -1,0 +1,30 @@
+.container {
+    background-color: var(--background-color);
+    color: var(--font-color);
+    display: flex;
+    font-family: sans-serif;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+    text-shadow: 0px 0px 10px var(--background-color);
+    width: 100vw;
+}
+
+.intro {
+    background-color: var(--box-color);
+    border-left: 30px dotted var(--box-border-color);
+    border-right: 30px dotted var(--box-border-color);
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+    width: 90%;
+}
+
+.large {
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 25px 0 0 0;
+}
+
+b {
+    font-weight: bold;
+}

@@ -4,11 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>KG's Laboratory</title>
+
+    <link rel="stylesheet" href="./index.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Righteous&display=swap" rel="stylesheet"> 
+
+    <script src="https://kit.fontawesome.com/3b644d47d0.js" crossorigin="anonymous"></script>
+
+    <title>Keegan Good</title>
 </head>
 <body>
-    <div class="container">
-        <p class="intro">Hi. My name is Keegan Good. I write code. This page is a portal to some of the smaller widgets and things that I've produced using Javascript. Thanks for visiting!</p>
+    <div class="content">
+        <div class="section" id="splash">
+            <div class="mandala-container" id="mandala-container">
+                <img src="./images/mandala/layer1.png" id="layer1" alt="The more "> 
+                <img src="./images/mandala/layer2.png" id="layer2" alt="you explore">
+                <img src="./images/mandala/layer3.png" id="layer3" alt="the deeper">
+                <img src="./images/mandala/layer4.png" id="layer4" alt="you will"> 
+                <img src="./images/mandala/layer5.png" id="layer5" alt="go.">
+                <img src="./images/mandala/layer6.png" id="layer6" alt="Tat Tvam Asi.">
+                <img src="./images/mandala/layer7.png" id="layer7" alt="A finger pointing at the moon">
+                <div class="initials" id="initials">KG</div>
+                <div class="mandala-border" id="mandala-border"></div>
+            </div>
+            <div class="down-arrow" id="down-arrow-container-1">
+                <strong id="down-arrow-1"><a href="#bio">&#x27F1;</a></strong>
+            </div>
+        </div>
+        <div class="section" id="bio">
+            <div class="bio-container">
+                <div class="bio-left">
+                    <p id="bio-p1"><span id="big-k">K</span> <strong>eegan Good</strong> is a full stack web developer, musician and multimedia artist based in Portland, Oregon. He employs both brain hemispheres to create dynamic and visually appealing web applications. Logical by philosophy and aesthetic by design, his apps provide custom solutions to unique business problems.
+                    </p>
+
+                    <p id="bio-p2"><strong id="bio-header">Skills:</strong>
+                        <ul class="skills-list">
+                            <li class="skill-item">Web Application Development</li>
+                            <li class="skill-item">Data Analysis</li>
+                            <li class="skill-item">Graphic Design</li>
+                            <li class="skill-item">Custom Site Styling</li>
+                        </ul>
+                    </p>
+                </div>
+
+                <div class="bio-right">
+                    <p id="bio-p3"> 
+                        <strong id="bio-header">Technologies:</strong>
+                        <ul class="language-list">
+                            <li class="language-item">Python / Django</li>
+                            <li class="language-item">Javascript</li>
+                            <li class="language-item">Ruby on Rails</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="social-links-container">
+                <ul class="social-links">
+                    <li class="social-link highlight-text" id="text-link">
+                        <a href="https://github.com/dirtTastesGood">GitHub</a>
+                    </li>
+                    <li class="social-link" id="text-link">
+                        <a href="https://codepen.io/dirttastesgood" >CodePen</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="down-arrow" id="down-arrow-container">
+                <strong class="highlight-text" id="down-arrow"><a href="#projects">&#x27F1;</a></strong>
+            </div>
+        </div>
+        <div class="section" id="projects">
+            <h3 class="projects-header">Projects:</h3>
+            <div class="projects-container">
+                <div class="project">
+                    <a href="https://www.bearlyfarms.herokuapp.com"><img src="./images/projects/bearlyBear.png" alt="Bearly Farms Logo"></a>
+                </div>
+            </div>
+            <div class="down-arrow" id="down-arrow-container">
+                <strong class="highlight-text" id="down-arrow"><a href="#contact">&#x27F1;</a></strong>
+            </div>
+        </div>
+        <div class="section" id="contact">
+            <h3 class="contact-header">
+                I'm here for you!
+            </h3>
+            <p>Have a problem that needs solving? Drop me a line and we'll get on it!</p>
+
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input class="highlightable-box" type="name" id="name"/>
+
+                <label for="subject">Subject:</label>
+                <input class="highlightable-box" type="text" id="subject"/>
+
+                <label for="email">Email:</label>
+                <input class="highlightable-box" type="email" id="email"/>
+
+                <label for="msg-body">Content:</label>
+                <textarea class="highlightable-box" type="textarea" id="msg-body"></textarea>
+            </form>
+
+            <div class="envelope-icon highlight-text"><a href="mailto:"></a><i class="far fa-envelope fa-3x"></i></div>
+        </div>
+            
     </div>
+    
+    <script src="./index.js"></script>
+
 </body>
 </html>
