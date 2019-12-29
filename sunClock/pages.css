@@ -1,0 +1,127 @@
+#main-container {
+  background-color: #8e8f91;
+}
+
+a:hover {
+  background-color: inherit !important;
+  font-weight: bold;
+  text-decoration: none !important;
+}
+
+a:checked {
+  color: #799fea !important;
+}
+
+#main-nav {
+  background-color: #eaeaea;
+  border: 1px solid black;
+  padding: 10px;
+  position: relative;
+  max-width: 300px;
+  a {
+    font-size: 1.5em !important;
+  }
+  #nav-content {
+    background-color: #c9cfd8;
+    border: 1px #444444 double;
+    height: 95%;
+    width: 100%;
+    .nav-link {
+      font-size: .7em;
+      margin: 0;
+      padding: 2px;
+      text-align: center;
+    }
+  }
+}
+
+#index-main {
+  text-align: center;
+  width: 80%;
+  col {
+    max-width: 20%;
+  }
+
+}
+
+#average_color_main {
+    .jumbotron {
+
+    }
+    .well {
+      background-color: #FFFFFF;
+      height: 33vh;
+      margin: 5px;
+      width: 100%;
+
+    }
+
+}
+
+.inverted {
+  transform: rotate(180deg);
+}
+
+#clock-main {
+  #timeArrow {
+    svg {
+      height: 30px;
+      width: 30px;
+    }
+  }
+
+  #clock-container {
+    background-color: #8a8c8e;
+    border-radius: 25px;
+    color: #000000;
+    height: 800px;
+    width: 800px;
+    canvas {
+      transition: transform .5s ease-in;
+    }
+    #sunIcon, #moonIcon {
+      opacity: 0;
+    }
+  }
+
+  #currentTimeLabels{
+    #labels {
+      display: none;
+    }
+    font-family: fantasy;
+    font-size: 1.5em;
+    left: 7%;
+    max-width: 300px;
+    padding: 15px;
+    position: absolute;
+    width: 50%;
+
+    div{
+      padding: 10px;
+    }
+  }
+
+  #citySelectForm {
+    left: 79%;
+    position: absolute;
+  }
+  #moonIcon {
+    svg {
+      fill: #eaeaea;
+      height: 40px;
+      width: 40px;
+    }
+  }
+  #sunIcon {
+    svg {
+      fill: #ffdd00;
+      height: 40px;
+      width: 40px;
+    }
+  }
+  #rotationDirectionArrow {
+    height: 30px;
+    transform: rotate(45deg);
+    width: 30px;
+  }
+}

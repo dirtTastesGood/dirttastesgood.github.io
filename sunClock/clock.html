@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<script
+			  src="https://code.jquery.com/jquery-3.4.1.js"
+			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+			  crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="./pages.css">
+
+        <script src="./secrets.js"></script>
+        <script src="./clock.js"></script>
+  <title>Document</title>
+</head>
+<body>
+    
+  <div id="clock-main">
+      <div class="jumbotron">
+    
+        <div id="currentTimeLabels" name="label">
+          <button class="btn btn-info" id="labelToggle">Show details</button>
+          <div id="labels">
+            <div id="sunRiseTime"></div>
+            <div id="sunSetTime"></div>
+            <div id="currentTime"></div>
+          </div>
+        </div>
+    
+        <div id="citySelectForm">
+          <div id="currentCity">
+            <h3>Current city:</h3>
+            <h2 id="cityName"><!--name of current city--></h2>
+          </div>
+        </div>
+    
+        <div id="clock-container">
+          <h4 id="currentTimeLabel" name="label">You are here:</h4>
+          <span id="timeArrow" name="label">
+    
+          <div class="row">
+            <div class="col col-xs-6">
+              <canvas id="circleCanvas"></canvas>
+              <div id="labels">
+                <p id="centerPoint" name="label"></p>
+                <p id="rotationDirectionArrow" name="label"><%= open_iconic :icon, :arrow_thick_bottom %></p>
+                <p id="sunIcon" name="label" width="40px" height="40px"><%= open_iconic :icon, :sun %></p>
+                <p id="moonIcon" name="label" width="40px" height="40px"><%= open_iconic :icon, :moon %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- end jumbotron -->
+    </div> <!-- end index-main -->
+    
+    <script>
+      let clock;
+      let city, state, country;
+    
+      function buildClock(location){
+        let ajax = clock.callAjax(location);
+        let riseSetTimes = [];
+        let riseSetCoords = [];
+    
+        $.when(ajax).then(function(data){
+          riseSetTimes = clock.saveAjaxResponse(data);
+          riseSetCoords = clock.calculateCoords(clock.timeToHours(riseSetTimes[0]), clock.timeToHours(riseSetTimes[1]));
+          clock.draw(riseSetCoords);
+    
+          setInterval(function(){
+              $.when(
+                  clock.rotate()).done(function(){
+                  clock.placeIcons(),
+                  $("#sunRiseTime").html("<b>Sunrise:</b><br> " + clock.twelveHourTime(riseSetTimes[0].toString())),
+                  $("#sunSetTime").html("<b>Sunset:</b><br> " + clock.twelveHourTime(riseSetTimes[1].toString())),
+                  $("#currentTime").html("<b>Current time:</b><br> " + clock.twelveHourTime(clock.getTime()))
+              }
+            );
+          }.bind(this), 1000);
+        });
+    
+      }
+    
+      $(function(){
+        let button = $("#labelToggle");
+        $("#labelToggle").on("click", function(){
+          $("#labels").toggle("fade", 300);
+          if(button.html() == "Show details"){
+            button.html("Hide details");
+    
+          } else {
+            button.html("Show details");
+          }
+        });
+      });
+    
+      $("#clock-container").ready(function(){
+        clock = new Clock();
+        buildClock("portland,or");
+      });
+    
+      $("#clock-container").ready(function(){
+        let clock = new Clock(); // located in assets/javascripts/clock.js.erb
+        let sunCoords = [];
+        let sunRiseTime, sunSetTime;
+        let currentTime;
+    
+          $.when(clock.callAjax()).done(function(data){
+    
+            clock.saveAjaxResponse(data);
+            sunRiseTime = data.response[0].sun.riseISO.substr(11,8);
+            sunSetTime = data.response[0].sun.setISO.substr(11,8);
+            sunRiseTimeInHours = clock.timeToHours(data.response[0].sun.riseISO.substr(11,8));
+            sunSetTimeInHours = clock.timeToHours(data.response[0].sun.setISO.substr(11,8));
+    
+            sunCoords = clock.calculateCoords(sunRiseTimeInHours, sunSetTimeInHours);
+    
+            clock.drawSun(sunCoords);
+    
+              setInterval(function(){
+                  $.when(
+                      clock.rotate()).done(function(){
+                      clock.placeIcons(),
+                      $("#sunRiseTime").html("<b>Sunrise:</b><br> " + clock.twelveHourTime(sunRiseTime)),
+                      $("#sunSetTime").html("<b>Sunset:</b><br> " + clock.twelveHourTime(sunSetTime)),
+                      $("#currentTime").html("<b>Current time:</b><br> " + clock.twelveHourTime(clock.getTime()))
+                  }
+                );
+              }.bind(this), 1000);
+          });
+        //console.log(clock.sunMoonData);
+      });
+    
+    </script>
+    
+</body>
+</html>
