@@ -4,6 +4,8 @@ class NoteMarker {
         this.fret = fret; // HTML fret div
         this.scaleFormula = neck.scale;
         this.scale = neck.markedNotes;
+        console.log(`this.scale: ${neck}`);
+
         // console.log(`fret: ${fret}`);
         this.container = this.draw();
         this.intervalFromTonic = this.getIntervalFromTonic();
