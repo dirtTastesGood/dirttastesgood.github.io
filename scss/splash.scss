@@ -4,8 +4,8 @@
   align-items: center;
   justify-content: center;
   background: linear-gradient(
-    $gunmetal,
-    darken($splash-bg, 20%) 90%,
+    lighten($gunmetal, 10%) 30%,
+    darken($splash-bg, 30%) 90%,
     $carnelian
   );
   // background-color: #413026;

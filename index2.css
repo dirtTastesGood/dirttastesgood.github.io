@@ -285,7 +285,7 @@ a {
 #splash {
   align-items: center;
   justify-content: center;
-  background: linear-gradient(#30343fff, #5c615f 90%, #b31919ff);
+  background: linear-gradient(#464c5c 30%, #434745 90%, #b31919ff);
   display: flex;
   height: 100vh;
 }
