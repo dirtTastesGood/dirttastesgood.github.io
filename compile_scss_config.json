@@ -1,7 +1,7 @@
 {
-    "root": "C:\\Users\\keego\\Documents\\Repos\\keegangood.github.io\\",
-    "scss_dir": "C:\\Users\\keego\\Documents\\Repos\\keegangood.github.io\\",
-    "css_dir": "C:\\Users\\keego\\Documents\\Repos\\keegangood.github.io\\",
+    "root": "/home/kg/Documents/repos/sites/keegangood.github.io/",
+    "scss_dir": "/home/kg/Documents/repos/sites/keegangood.github.io/scss/",
+    "css_dir": "/home/kg/Documents/repos/sites/keegangood.github.io/",
     "css_filename": "index2.css",
     "output_style": "expanded"
 }
