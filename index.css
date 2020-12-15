@@ -6,22 +6,16 @@
     #433633;
  */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
+/* html {
     scroll-behavior: smooth;
-}
-
+} */
+/* 
 a {
     color: inherit; 
     text-decoration: none;
     transition: all .5s ease-out;
-}
-
+} */
+/* 
 .social-link{
     border: 3px solid #393e44;
     font-size: 1.5rem;
@@ -32,9 +26,10 @@ a {
 .social-link:hover{
     color: #393e44;
     text-shadow: 0px 0px 10px #90e6e9;
-}
+} */
 
 .highlightable-box {
+    border: 2px solid #949497;
     transition: box-shadow .2s ease-in-out, border .2s ease-in-out;
 }
 
@@ -54,60 +49,48 @@ a {
 
 
 /* splash, bio, projects, contact */
-.section { 
-    width: 100vw;
-}
-
-#splash {
+/* #splash {
     align-items: center;
+    justify-content: center;
     background-color: #413026;
     border-bottom:  #5c5552 10px dotted;
     display: flex;
-    flex-direction: column;
     height: 100vh;
-    position: relative;
 }
 
 .mandala-container {
     align-items: center;
     display: flex;
-    height: 90vh;
     justify-content: center;
-    max-height: 90vw;
-    max-width: 90vh;
+    margin-bottom: 15vh;
+    height: 85vh;
+    max-height:85vw;
+    width:85vw;
+    max-width:85vh;
     opacity: 0;
-    margin-bottom: 35vh;
     position: relative;
-    top: 75px;
-    width: 90vw;
 }
 
 #splash .mandala-container img {
-    border-radius: 100px;
-    height: 95%;
-    object-fit: contain;
+    max-height: 100%;
+    max-width: 100%;
     position: absolute;
-    width: 95%;
 }
 
 #layer1 {
     opacity: 0;
-    transition: opacity 500ms ease-in-out;
+    transition: opacity 1000ms ease-in;
 }
-#layer2 {
-    opacity: 0;
-    transition: opacity 1000ms ease-in-out;
-    transition-delay: 400ms;
-}
+
 #layer3 {
     opacity: 0;
     transition: opacity 1000ms ease-in-out;
-    transition-delay: 1000ms;
+    transition-delay: 800ms;
 }
 #layer4 {
     opacity: 0;
     transition: opacity 1000ms ease-in-out;
-    transition-delay: 1600ms;
+    transition-delay: 1500ms;
 }
 #layer5 {
     opacity: 0;
@@ -117,40 +100,38 @@ a {
 #layer6 {
     opacity: 0;
     transition: opacity 1000ms ease-in-out;
-    transition-delay: 2800ms;
-}
-#layer7 {
-    box-shadow: 0px 0px 75px #f0f0f7;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1000ms ease-in-out;
-    transition-delay: 3400ms;
-    width: 100%;
+    transition-delay: 2900ms;
 }
 
-.mandala-border {
-    border: 4px double #5c5552;
-    border-radius: 100px;
-    height: 95%;
+#layer2 {
     opacity: 0;
-    position: absolute;
+    transition: opacity 1000ms ease-in-out;
+    transition-delay: 3600ms;
+}
+
+#layer8 {
+    opacity: 0;
+    transition: opacity 1000ms ease-in-out;
+    transition-delay: 3600ms;
+}
+#layer7 {
+    opacity: 0;
     transition: opacity 1000ms ease-in-out;
     transition-delay: 3400ms;
-    width: 95%;
-}
+} 
 
 .initials {
     color: #393e44; 
     font-family: Righteous;
-    font-size: 5.5rem;
+    font-size: 6.5rem;
     opacity: 0;
     position: relative;
     z-index: 1;
     text-shadow: 0px 0px 4px #f0f0f7;
     transition: opacity 900ms ease-in-out;
     transition-delay: 3400ms;
-}
-
+} */
+/* 
 #down-arrow-container-1 {
     opacity: 0;
     transition: opacity 1000ms ease-in-out;
@@ -182,8 +163,8 @@ a {
 
 #down-arrow:hover {
     text-shadow: 0px 0px 5px #90e6e9;
-}
-
+} */
+/* 
 #bio {
     align-items: center;
     background-color: #5c5552;
@@ -193,7 +174,6 @@ a {
     flex-direction: column;
     min-height: 100vh;
     padding-top: 5vh;
-    /* position: relative; */
     text-align: center;
 }
 
@@ -233,7 +213,7 @@ strong {
 #bio-p1 {
     font-size: 1.1rem;
     margin-top: 35px;
-    /* position: relative; */
+    position: relative;
     top: -25px;
 }
 
@@ -269,9 +249,9 @@ strong {
 .social-link {
     border-radius: 15px;
     padding: 10px;
-}
+} */
 
-#projects {
+/* #projects {
     align-items: center;
     background-color: #393e44;
     border-bottom: #949497 10px dotted;
@@ -308,9 +288,9 @@ strong {
     border-radius: 50%;
     height: 100%;
     width: 100%;
-}
+} */
 
-#contact {
+/* #contact {
     align-items: center;
     background-color: #949497;
     border-top: #393e44 10px dotted;
@@ -371,15 +351,15 @@ i.far {
 #contact-form #msg-body{
     height: 25vh;
     width: 90vw;
-}
+} */
 
 /* Tablets */
 @media only screen and (min-width: 700px) {
     #splash .mandala-container {
-        height: 60vh;
-        max-height: 60vw;
-        max-width: 60vh;
-        width: 60vw;
+        height: 85vh;
+        max-height: 85vw;
+        max-width: 85vh;
+        width: 85vw;
     }
 
     .bio-container {

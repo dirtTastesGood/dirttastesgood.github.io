@@ -1,7 +1,7 @@
 window.addEventListener("load", function(){
     let container = document.getElementById("mandala-container");
     container.style.opacity = 1;
-    for(i=1; i <= 7; i++){
+    for(i=1; i <= 8; i++){
         let layer = document.getElementById("layer"+i);
             layer.style.opacity = 1;
     }
