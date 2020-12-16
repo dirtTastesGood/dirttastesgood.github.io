@@ -1,3 +1,6 @@
+// breakpoints
+$large: 700px;
+
 // splash mandala colors
 $gunmetal: #30343fff;
 $ghost-white: #fafaffff;
@@ -5,8 +8,11 @@ $deep-space-sparkle: #335c67ff;
 $electric-blue: #90e6e9ff;
 $carnelian: #b31919ff;
 
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;1,200&display=swap');
+
 // section background colors
 $splash-bg: #8f9492;
-// $bio-bg
+$bio-bg: #b5bab8;
 // $projects-bg
 // $contact-bg

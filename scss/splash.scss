@@ -1,17 +1,21 @@
 @import './variables.scss';
+.glow {
+  box-shadow: inset 0 -100px 40px -35px $carnelian;
+  -moz-box-shadow: inset 0 -100px 40px -35px $carnelian;
+}
 
 #splash {
   align-items: center;
   justify-content: center;
   background: linear-gradient(
     lighten($gunmetal, 10%) 30%,
-    darken($splash-bg, 30%) 90%,
-    $carnelian
+    darken($splash-bg, 30%) 90%
   );
-  // background-color: #413026;
-  // border-bottom: $carnelian 10px dotted;
+
   display: flex;
   height: 100vh;
+  transition: all 0.7s ease-in-out;
+  transition-delay: 4000ms;
 
   .mandala-container {
     align-items: center;
@@ -73,10 +77,11 @@
       transition: opacity 1000ms ease-in-out;
       transition-delay: 3400ms;
     }
+
     .initials {
       color: $deep-space-sparkle;
       font-family: Righteous;
-      font-size: 6.5rem;
+      font-size: 9.5rem;
       opacity: 0;
       position: relative;
       z-index: 1;

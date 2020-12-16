@@ -8,18 +8,6 @@ a {
   transition: all 0.5s ease-out;
 }
 
-.social-link {
-  border: 3px solid #393e44;
-  font-size: 1.5rem;
-  margin: 5px;
-  text-decoration: none;
-}
-
-.social-link:hover {
-  color: #393e44;
-  text-shadow: 0px 0px 10px #90e6e9;
-}
-
 .section {
   width: 100%;
 }
@@ -55,110 +43,6 @@ a {
 
 #down-arrow:hover {
   text-shadow: 0px 0px 5px #90e6e9;
-}
-
-#bio {
-  align-items: center;
-  background-color: #5c5552;
-  border-bottom: #393e44 10px dotted;
-  border-top: #413026 10px dotted;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  padding-top: 5vh;
-  text-align: center;
-}
-
-#bio .bio-container {
-  margin-bottom: 5vh;
-}
-
-#bio .bio-container #bio ul {
-  font-family: 'Montserrat', 'sans-serif';
-  list-style: none;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-#bio .bio-container #bio-left {
-  display: flex;
-  flex-direction: column;
-}
-
-#bio .bio-container #big-k {
-  font-family: Righteous;
-  font-size: 4rem;
-  line-height: 1rem;
-}
-
-#bio .bio-container strong {
-  font-weight: bold;
-}
-
-#bio .bio-container #bio p {
-  font-family: 'Montserrat', 'sans-serif';
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-#bio .bio-container #bio-p1 {
-  font-size: 1.1rem;
-  margin-top: 35px;
-  /* position: relative; */
-  top: -25px;
-}
-
-#bio .bio-container #bio-p2 {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-#bio .bio-container #bio-p1 strong {
-  font-size: 2rem;
-}
-
-#bio .bio-container #bio-header {
-  font-family: Righteous;
-  font-size: 1.5rem;
-}
-
-#bio .bio-container #bio-right {
-  display: flex;
-  flex-direction: column;
-}
-
-#bio .bio-container #bio-p3 {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-#bio .bio-container .social-links {
-  display: flex;
-  padding-bottom: 1vh;
-}
-
-#bio .bio-container .social-link {
-  border-radius: 15px;
-  padding: 10px;
-}
-
-@media only screen and (min-width: 700px) {
-  #bio .bio-container .bio-container {
-    width: 75vw;
-  }
-  #bio .bio-container #bio-p1 {
-    font-size: 1.7rem;
-  }
-  #bio .bio-container #bio-p1 strong {
-    font-size: 2rem;
-  }
-  #bio .bio-container .skills-list,
-#bio .bio-container .language-list {
-    font-size: 1.5rem;
-  }
-  #bio .bio-container .social-links {
-    padding-bottom: 15vh;
-  }
 }
 
 #projects {
@@ -282,12 +166,107 @@ a {
   }
 }
 
+#bio {
+  background-color: #b5bab8;
+  border-bottom: #393e44 10px dotted;
+  border-top: #30343fff 10px dotted;
+  display: flex;
+  font-family: 'Righteous', 'sans-serif';
+  flex-wrap: wrap;
+  min-height: 100vh;
+  padding-top: 5vh;
+}
+
+#bio #header {
+  font-size: 3em;
+  letter-spacing: 2px;
+  height: 10vh;
+  margin: 0 10px;
+}
+
+#bio #header #big-k,
+#bio #header #big-g {
+  font-size: 2em;
+}
+
+#bio #header #profession {
+  font-size: 0.5em;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+#bio #header #profession #where-from {
+  font-size: 0.9em;
+  padding: 5px 0;
+}
+
+#bio #bio-text {
+  text-align: center;
+  background-color: #cfd3d1;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+  line-height: 1.2em;
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+}
+
+#bio #bio-text p {
+  margin: 15px 0;
+}
+
+#bio #bio-text #social-links {
+  padding: 30px;
+}
+
+#bio #bio-text #social-links .social-link {
+  font-size: 5rem;
+}
+
+#bio #bio-text #social-links .social-link:hover {
+  color: #335c67ff;
+}
+
+#bio #tech {
+  margin: auto;
+}
+
+#bio #tech #badges {
+  display: flex;
+}
+
+#bio #tech #badges .badge {
+  font-size: 2.5em;
+  margin: 0 2px;
+}
+
+#bio #tech #badges #django-badge {
+  font-size: 3em;
+}
+
+#bio #tech #github-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#bio #tech #github-info #stats {
+  margin-left: auto;
+}
+
+.glow {
+  box-shadow: inset 0 -100px 40px -35px #b31919ff;
+  -moz-box-shadow: inset 0 -100px 40px -35px #b31919ff;
+}
+
 #splash {
   align-items: center;
   justify-content: center;
-  background: linear-gradient(#464c5c 30%, #434745 90%, #b31919ff);
+  background: linear-gradient(#464c5c 30%, #434745 90%);
   display: flex;
   height: 100vh;
+  transition: all 0.7s ease-in-out;
+  transition-delay: 4000ms;
 }
 
 #splash .mandala-container {
@@ -359,7 +338,7 @@ a {
 #splash .mandala-container .initials {
   color: #335c67ff;
   font-family: Righteous;
-  font-size: 6.5rem;
+  font-size: 9.5rem;
   opacity: 0;
   position: relative;
   z-index: 1;

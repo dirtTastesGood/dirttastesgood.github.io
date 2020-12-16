@@ -1,0 +1,87 @@
+@import './variables.scss';
+
+#bio {
+  background-color: $bio-bg;
+  border-bottom: #393e44 10px dotted;
+  border-top: $gunmetal 10px dotted;
+  display: flex;
+  font-family: 'Righteous', 'sans-serif';
+  flex-wrap: wrap;
+  min-height: 100vh;
+  padding-top: 5vh;
+
+  #header {
+    font-size: 3em;
+    letter-spacing: 2px;
+    height: 10vh;
+    margin: 0 10px;
+    #big-k,
+    #big-g {
+      font-size: 2em;
+    }
+
+    #profession {
+      font-size: 0.5em;
+      letter-spacing: 1px;
+
+      margin-top: 10px;
+      #where-from {
+        font-size: 0.9em;
+        padding: 5px 0;
+      }
+    }
+  }
+
+  #bio-text {
+    text-align: center;
+    background-color: lighten($bio-bg, 10%);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    line-height: 1.2em;
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+
+    p {
+      margin: 15px 0;
+    }
+    #social-links {
+      padding: 30px;
+      .social-link {
+        font-size: 5rem;
+      }
+
+      .social-link:hover {
+        color: $deep-space-sparkle;
+      }
+    }
+  }
+
+  #tech {
+    margin: auto;
+    #badges {
+      display: flex;
+      .badge {
+        font-size: 2.5em;
+        margin: 0 2px;
+      }
+      #django-badge {
+        font-size: 3em;
+      }
+    }
+
+    #github-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      #stats {
+        margin-left: auto;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 700px) {
+    #bio {
+    }
+  }
+}

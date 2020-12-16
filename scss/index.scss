@@ -1,10 +1,8 @@
-$large: 700px;
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
 @import './variables.scss';
 
 // import other pages
 @import './splash.scss';
+@import './bio.scss';
 
 // $color1:
 
@@ -16,18 +14,6 @@ a {
   color: inherit;
   text-decoration: none;
   transition: all 0.5s ease-out;
-}
-
-.social-link {
-  border: 3px solid #393e44;
-  font-size: 1.5rem;
-  margin: 5px;
-  text-decoration: none;
-}
-
-.social-link:hover {
-  color: #393e44;
-  text-shadow: 0px 0px 10px #90e6e9;
 }
 
 .section {
@@ -67,113 +53,6 @@ a {
   text-shadow: 0px 0px 5px #90e6e9;
 }
 
-#bio {
-  align-items: center;
-  background-color: #5c5552;
-  border-bottom: #393e44 10px dotted;
-  border-top: #413026 10px dotted;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  padding-top: 5vh;
-  text-align: center;
-
-  .bio-container {
-    margin-bottom: 5vh;
-
-    #bio ul {
-      font-family: 'Montserrat', 'sans-serif';
-      list-style: none;
-      text-align: center;
-      margin-bottom: 10px;
-    }
-
-    #bio-left {
-      display: flex;
-      flex-direction: column;
-    }
-
-    #big-k {
-      font-family: Righteous;
-      font-size: 4rem;
-      line-height: 1rem;
-    }
-
-    strong {
-      font-weight: bold;
-    }
-
-    #bio p {
-      font-family: 'Montserrat', 'sans-serif';
-      margin-left: 20px;
-      margin-right: 20px;
-    }
-
-    #bio-p1 {
-      font-size: 1.1rem;
-      margin-top: 35px;
-      /* position: relative; */
-      top: -25px;
-    }
-
-    #bio-p2 {
-      text-align: center;
-      margin-bottom: 10px;
-    }
-
-    #bio-p1 strong {
-      font-size: 2rem;
-    }
-
-    #bio-header {
-      font-family: Righteous;
-      font-size: 1.5rem;
-    }
-
-    #bio-right {
-      display: flex;
-      flex-direction: column;
-    }
-
-    #bio-p3 {
-      text-align: center;
-      margin-bottom: 10px;
-    }
-
-    .social-links {
-      display: flex;
-      padding-bottom: 1vh;
-    }
-
-    .social-link {
-      border-radius: 15px;
-      padding: 10px;
-    }
-
-    @media only screen and (min-width: 700px) {
-      .bio-container {
-        width: 75vw;
-      }
-
-      #bio-p1 {
-        font-size: 1.7rem;
-      }
-
-      #bio-p1 strong {
-        font-size: 2rem;
-      }
-
-      .skills-list,
-      .language-list {
-        font-size: 1.5rem;
-      }
-
-      .social-links {
-        padding-bottom: 15vh;
-      }
-    }
-  }
-}
 #projects {
   align-items: center;
   background-color: #393e44;
