@@ -1,139 +1,23 @@
-#bio {
-  background-color: #b5bab8;
-  border-bottom: #393e44 10px dotted;
-  border-top: #30343fff 10px dotted;
-  display: flex;
-  font-family: "Righteous", "sans-serif";
-  flex-wrap: wrap;
-  min-height: 100vh;
-  padding-top: 5vh;
+html {
+  scroll-behavior: smooth;
 }
 
-#bio #header {
-  font-size: 3em;
-  letter-spacing: 2px;
-  min-height: 10vh;
-  margin: 10px auto;
-  text-align: center;
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.5s ease-out;
 }
 
-#bio #header #big-k,
-#bio #header #big-g {
-  font-size: 2em;
-}
-
-#bio #header #profession {
-  font-size: 0.5em;
-  letter-spacing: 1px;
-  margin-top: 10px;
-}
-
-#bio #header #profession #where-from {
-  font-size: 0.9em;
-  padding: 5px 0;
-}
-
-#bio #right-panel {
-  margin: 0 auto;
-  text-align: center;
-}
-
-#bio #right-panel #headshot {
-  height: 40vh;
-  width: 40vw;
-  max-height: 40vw;
-  max-width: 40vh;
-  margin: 0 auto;
-  margin-bottom: 20px;
-}
-
-#bio #right-panel #headshot img {
-  border: 4px solid black;
-  border-radius: 50%;
-  height: 100%;
+.section {
   width: 100%;
 }
 
-#bio #right-panel #soft-skills {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.2em;
-  width: 100%;
+.highlightable-box {
+  transition: all .3s ease-in-out;
 }
 
-#bio #bio-text {
-  text-align: center;
-  background-color: #cfd3d1;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.5em;
-  line-height: 1.2em;
-  padding: 10px;
-  margin: 10px auto;
-}
-
-#bio #bio-text p {
-  margin: 15px 0;
-}
-
-#bio #bio-text #social-links {
-  padding: 30px;
-}
-
-#bio #bio-text #social-links .social-link {
-  font-size: 5rem;
-}
-
-#bio #bio-text #social-links .social-link:hover {
-  color: #335c67ff;
-}
-
-#bio #tech {
-  margin: auto;
-}
-
-#bio #tech #badges {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 10px;
-  width: 70%;
-  margin: 0 auto;
-}
-
-#bio #tech #badges .badge {
-  font-size: 2.5em;
-  margin: 0 2px;
-}
-
-#bio #tech #badges #django-badge {
-  font-size: 3em;
-}
-
-#bio #tech #github-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#bio #tech #github-info #stats {
-  margin-left: auto;
-}
-
-@media only screen and (min-width: 700px) {
-  #bio #header {
-    font-size: 6em;
-  }
-  #bio #header #profession {
-    font-size: 0.4em;
-  }
-  #bio #header #profession #where-from {
-    font-size: 0.8em;
-  }
-  #bio #tech #badges {
-    width: 100%;
-  }
+.highlightable-box:focus {
+  box-shadow: 0 0 10px #335c67ff;
 }
 
 #contact {
@@ -243,87 +127,142 @@
   }
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-  transition: all 0.5s ease-out;
-}
-
-.section {
-  width: 100%;
-}
-
-.highlightable-box {
-  transition: all .3s ease-in-out;
-}
-
-.highlightable-box:focus {
-  box-shadow: 0 0 10px #335c67ff;
-}
-
-#projects {
-  align-items: center;
-  background-color: #393e44;
-  border-bottom: #949497 10px dotted;
-  border-top: #b5bab8 10px dotted;
+#bio {
+  background-color: #b5bab8;
+  border-bottom: #393e44 10px dotted;
+  border-top: #30343fff 10px dotted;
   display: flex;
-  flex-direction: column;
+  font-family: 'Righteous', 'sans-serif';
+  flex-wrap: wrap;
   min-height: 100vh;
-  padding: 20px 0;
-  position: relative;
+  padding-top: 5vh;
 }
 
-#projects #projects-bg {
+#bio #header {
+  font-size: 3em;
+  letter-spacing: 2px;
+  min-height: 10vh;
+  margin: 10px auto;
+  text-align: center;
+}
+
+#bio #header #big-k,
+#bio #header #big-g {
+  font-size: 2em;
+}
+
+#bio #header #profession {
+  font-size: 0.5em;
+  letter-spacing: 1px;
   margin-top: 10px;
 }
 
-#projects .projects-header {
-  font-family: Righteous;
-  font-size: 3.5rem;
-  align-self: flex-start;
-  margin-left: 15px;
+#bio #header #profession #where-from {
+  font-size: 0.9em;
+  padding: 5px 0;
 }
 
-#projects .projects-container {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  width: 95vw;
+#bio #right-panel {
+  margin: 0 auto;
+  text-align: center;
 }
 
-#projects .projects-container .project {
-  height: 43vh;
-  margin: 10px;
-  max-height: 43vw;
-  max-width: 43vh;
-  padding: 1vh;
-  position: relative;
-  width: 43vw;
+#bio #right-panel #headshot {
+  height: 40vh;
+  width: 40vw;
+  max-height: 40vw;
+  max-width: 40vh;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
 
-#projects .projects-container .project img {
-  border: 7px solid black;
-  box-shadow: 0 0 15px black;
+#bio #right-panel #headshot img {
+  border: 4px solid black;
   border-radius: 50%;
+  object-fit: cover;
   height: 100%;
   width: 100%;
 }
 
+#bio #right-panel #soft-skills {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
+  width: 100%;
+}
+
+#bio #bio-text {
+  text-align: center;
+  background-color: #cfd3d1;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+  line-height: 1.2em;
+  padding: 10px;
+  margin: 10px auto;
+}
+
+#bio #bio-text p {
+  margin: 15px 0;
+}
+
+#bio #bio-text #social-links {
+  padding: 30px;
+}
+
+#bio #bio-text #social-links .social-link {
+  font-size: 5rem;
+}
+
+#bio #bio-text #social-links .social-link:hover {
+  color: #335c67ff;
+}
+
+#bio #tech {
+  margin: auto;
+}
+
+#bio #tech #badges {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+#bio #tech #badges .badge {
+  font-size: 2.5em;
+  margin: 0 2px;
+}
+
+#bio #tech #badges #django-badge {
+  font-size: 3em;
+}
+
+#bio #tech #github-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#bio #tech #github-info #stats {
+  margin-left: auto;
+}
+
 @media only screen and (min-width: 700px) {
-  #projects .project {
-    height: 20vh;
-    max-height: 20vw;
-    max-width: 20vh;
-    text-align: center;
-    width: 20vw;
+  #bio #header {
+    font-size: 6em;
+  }
+  #bio #header #profession {
+    font-size: 0.4em;
+  }
+  #bio #header #profession #where-from {
+    font-size: 0.8em;
+  }
+  #bio #tech #badges {
+    width: 100%;
   }
 }
 
@@ -429,5 +368,67 @@ a {
   }
   #splash .mandala-container .initials {
     font-size: 9em;
+  }
+}
+
+#projects {
+  align-items: center;
+  background-color: #393e44;
+  border-bottom: #949497 10px dotted;
+  border-top: #b5bab8 10px dotted;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px 0;
+  position: relative;
+}
+
+#projects #projects-bg {
+  margin-top: 10px;
+}
+
+#projects .projects-header {
+  font-family: Righteous;
+  font-size: 3.5rem;
+  align-self: flex-start;
+  margin-left: 15px;
+}
+
+#projects .projects-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 95vw;
+}
+
+#projects .projects-container .project {
+  height: 43vh;
+  margin: 10px;
+  max-height: 43vw;
+  max-width: 43vh;
+  padding: 1vh;
+  position: relative;
+  width: 43vw;
+}
+
+#projects .projects-container .project img {
+  border: 7px solid black;
+  box-shadow: 0 0 15px black;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
+
+@media only screen and (min-width: 700px) {
+  #projects .project {
+    height: 20vh;
+    max-height: 20vw;
+    max-width: 20vh;
+    text-align: center;
+    width: 20vw;
   }
 }

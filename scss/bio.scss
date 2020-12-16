@@ -1,11 +1,11 @@
-@import "./variables.scss";
+@import './variables.scss';
 
 #bio {
   background-color: $bio-bg;
   border-bottom: #393e44 10px dotted;
   border-top: $gunmetal 10px dotted;
   display: flex;
-  font-family: "Righteous", "sans-serif";
+  font-family: 'Righteous', 'sans-serif';
   flex-wrap: wrap;
   min-height: 100vh;
   padding-top: 5vh;
@@ -47,25 +47,25 @@
       img {
         border: 4px solid black;
         border-radius: 50%;
+        object-fit: cover;
         height: 100%;
         width: 100%;
-    }
-}
-      #soft-skills {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        font-family: "Montserrat", sans-serif;
-        font-size: 1.2em;
-        width: 100%;
-
       }
+    }
+    #soft-skills {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.2em;
+      width: 100%;
+    }
   }
 
   #bio-text {
     text-align: center;
     background-color: lighten($bio-bg, 10%);
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.5em;
     line-height: 1.2em;
     padding: 10px;
