@@ -10,6 +10,7 @@ window.addEventListener('load', function () {
   initials.style.opacity = 1;
 
   let splash = document.querySelector('#splash');
-  console.log('WTF');
   splash.classList.add('glow');
+
+  dotsAndLines();
 });

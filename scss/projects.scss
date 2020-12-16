@@ -1,0 +1,61 @@
+@import './variables.scss';
+
+#projects {
+  align-items: center;
+  background-color: $projects-bg;
+  border-bottom: #949497 10px dotted;
+  border-top: $bio-bg 10px dotted;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px 0;
+  position: relative;
+
+  #projects-bg {
+    margin-top: 20px;
+  }
+
+  .projects-header {
+    font-family: Righteous;
+    font-size: 3.5rem;
+    align-self: flex-start;
+  }
+
+  .projects-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+    padding: 25px;
+    width: 95vw;
+
+    .project {
+      height: 40vh;
+      margin: 20px;
+      max-height: 40vw;
+      max-width: 40vh;
+      width: 40vw;
+
+      img {
+        border: 10px solid black;
+        box-shadow: 0 0 15px darken($projects-bg, 50%);
+
+        border-radius: 50%;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 700px) {
+    .project {
+      height: 20vh;
+      max-height: 20vw;
+      max-width: 20vh;
+      text-align: center;
+      width: 20vw;
+    }
+  }
+}

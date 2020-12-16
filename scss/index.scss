@@ -3,9 +3,9 @@
 // import other pages
 @import './splash.scss';
 @import './bio.scss';
+@import './projects.scss';
 
 // $color1:
-
 html {
   scroll-behavior: smooth;
 }
@@ -51,56 +51,6 @@ a {
 
 #down-arrow:hover {
   text-shadow: 0px 0px 5px #90e6e9;
-}
-
-#projects {
-  align-items: center;
-  background-color: #393e44;
-  border-bottom: #949497 10px dotted;
-  border-top: #5c5552 10px dotted;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  justify-content: center;
-
-  .projects-header {
-    font-family: Righteous;
-    font-size: 1.5rem;
-  }
-
-  .projects-container {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    min-height: 80vh;
-    width: 95vw;
-
-    .project {
-      height: 60vh;
-      margin: 15px;
-      max-height: 60vw;
-      max-width: 60vh;
-      text-align: center;
-      width: 60vw;
-
-      img {
-        border: 10px solid black;
-        border-radius: 50%;
-        height: 100%;
-        width: 100%;
-      }
-    }
-  }
-
-  @media only screen and (min-width: 700px) {
-    .project {
-      height: 20vh;
-      max-height: 20vw;
-      max-width: 20vh;
-      text-align: center;
-      width: 20vw;
-    }
-  }
 }
 
 #contact {
