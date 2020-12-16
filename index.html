@@ -68,8 +68,13 @@
       src="https://kit.fontawesome.com/3b644d47d0.js"
       crossorigin="anonymous"
     ></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.js"></script>
+
+    <script src="./js/softSkills.js"></script>
     <script src="./js/dot.js"></script>
     <script src="./js/dotsAndLines.js"></script>
+
 
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./index2.css" />
@@ -108,35 +113,32 @@
         </div>
       </div>
       <div class="section" id="bio">
-
         <div id="header">
           <span id="big-k">K</span>eegan <span id="big-g">G</span>ood
-          
+
           <div id="profession">
-              Full-Stack Dev | Enthusiastic Autodidact
-              
-              <div id="where-from">Portland, Oregon</div>
-            </div>
+            Full-Stack Dev | Enthusiastic Autodidact
+
+            <div id="where-from">Portland, Oregon</div>
+          </div>
         </div>
-        
+
         <div id="right-panel">
-
             <div id="headshot">
-                <img src="" alt="">
+              <img src="./images/mandala/mandala3NoBg.png" alt="" />
             </div>
-            <div id="soft-skills"></div>
-        </div>
-            
+            <div id="soft-skills">
+              
+            </div>
 
+        </div>
 
         <div id="bio-text">
           <p>
             I design and build web applications that are logical and efficient
             as well as aesthetic and ergonomic.
           </p>
-          <p>
-            I am perennially seeking graceful solutions to complex problems.
-          </p>
+          <p>I perennially seek graceful solutions to complex problems.</p>
           <div id="social-links">
             <a href="https://github.com/keegangood/" class="social-link">
               <i class="devicon-github-original" title="Keegan Good Github"></i>
@@ -239,39 +241,37 @@
         </div>
       </div>
       <div class="section" id="contact">
+        <div id="bg-mandala"></div>
+        <div id="contact-content">
+          <h2 class="contact-header">I'm here for you!</h2>
+          <p>
+            Have a problem that needs solving? Drop me a line and we'll get on
+            it!
+          </p>
 
-        <div id="bg-mandala">
+          <form id="contact-form">
+            <label for="name">Name:</label>
+            <input class="highlightable-box" type="name" id="name" />
+
+            <label for="subject">Subject:</label>
+            <input class="highlightable-box" type="text" id="subject" />
+
+            <label for="email">Email:</label>
+            <input class="highlightable-box" type="email" id="email" />
+
+            <label for="msg-body">Content:</label>
+            <textarea
+              class="highlightable-box"
+              type="textarea"
+              id="msg-body"
+            ></textarea>
+          </form>
+
+          <div class="envelope-icon">
+            <a href="mailto:"></a
+            ><i class="far fa-envelope fa-3x highlightable-text"></i>
+          </div>
         </div>
-<div id="contact-content">
-
-    <h2 class="contact-header">I'm here for you!</h2>
-    <p>
-      Have a problem that needs solving? Drop me a line and we'll get on it!
-    </p>
-
-    <form id="contact-form">
-      <label for="name">Name:</label>
-      <input class="highlightable-box" type="name" id="name" />
-
-      <label for="subject">Subject:</label>
-      <input class="highlightable-box" type="text" id="subject" />
-
-      <label for="email">Email:</label>
-      <input class="highlightable-box" type="email" id="email" />
-
-      <label for="msg-body">Content:</label>
-      <textarea
-        class="highlightable-box"
-        type="textarea"
-        id="msg-body"
-      ></textarea>
-    </form>
-
-    <div class="envelope-icon">
-      <a href="mailto:"></a
-      ><i class="far fa-envelope fa-3x highlightable-text"></i>
-    </div>
-</div>
       </div>
     </div>
 

@@ -16,4 +16,7 @@ window.addEventListener('load', function () {
   window.addEventListener('resize', () => {
     dotsAndLines(window.innerHeight, window.innerWidth);
   });
+
+
+  softSkills()
 });
