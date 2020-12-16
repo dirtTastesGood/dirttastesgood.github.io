@@ -11,6 +11,9 @@ window.addEventListener('load', function () {
 
   let splash = document.querySelector('#splash');
   splash.classList.add('glow');
+  dotsAndLines(window.innerHeight, window.innerWidth);
 
-  dotsAndLines();
+  window.addEventListener('resize', () => {
+    dotsAndLines(window.innerHeight, window.innerWidth);
+  });
 });

@@ -23,7 +23,7 @@ class Dot {
     // draw a line between
     neighbors.map(neighbor => {
       this.ctx.beginPath();
-      this.ctx.lineWidth = '2'; // width of the line
+      this.ctx.lineWidth = '1'; // width of the line
       this.ctx.globalAlpha = neighbor.opacity;
       this.ctx.strokeStyle = this.color; // color of the line
       this.ctx.moveTo(this.x, this.y); // begins a new sub-path based on the given x and y values.

@@ -7,10 +7,7 @@
 #splash {
   align-items: center;
   justify-content: center;
-  background: linear-gradient(
-    lighten($gunmetal, 10%) 30%,
-    darken($splash-bg, 30%) 90%
-  );
+  background: linear-gradient(lighten($gunmetal, 10%) 30%, $gunmetal 90%);
 
   display: flex;
   height: 100vh;

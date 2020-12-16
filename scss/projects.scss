@@ -32,16 +32,36 @@
     width: 95vw;
 
     .project {
-      height: 40vh;
-      margin: 20px;
-      max-height: 40vw;
-      max-width: 40vh;
-      width: 40vw;
+      height: 43vh;
+      margin: 10px;
+      max-height: 43vw;
+      max-width: 43vh;
+      padding: 2vw;
+      position: relative;
+      width: 43vw;
+
+      &:after {
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:hover {
+        &:after {
+          content: '';
+          background-color: black;
+          border-radius: 50%;
+          display: block;
+          position: absolute;
+          top: 10px;
+          z-index: 1;
+          opacity: 0.8;
+          height: 100%;
+          width: 100%;
+        }
+      }
 
       img {
         border: 10px solid black;
         box-shadow: 0 0 15px darken($projects-bg, 50%);
-
         border-radius: 50%;
         height: 100%;
         width: 100%;
