@@ -4,15 +4,21 @@ const dotsAndLines = (windowHeight, windowWidth) => {
   const context = canvas.getContext('2d');
   let animationFrameId;
 
+
   canvas.height = windowHeight;
   canvas.width = windowWidth;
+  let totalDots = 30;
+  let distThreshold = 150;
+
+  if(windowWidth > 700){
+    canvas.width = windowWidth * .9;
+    distThreshold = 300;
+
+  }
+
 
   const dots = [];
-  const totalDots = Math.floor((windowHeight * windowWidth) / 10000);
-  console.log(Math.floor((windowHeight * windowWidth) / 10000));
-  const distThreshold = 200;
-  let frameCount = 0;
-  for (let i = 0; i < 25; i++) {
+  for (let i = 0; i < totalDots; i++) {
     let x = Math.random() * canvas.width;
     let y = Math.random() * canvas.height;
     let dot = new Dot(context, x, y, 2);
@@ -22,11 +28,6 @@ const dotsAndLines = (windowHeight, windowWidth) => {
   const render = () => {
     context.fillStyle = '#393e44';
     context.fillRect(0, 0, canvas.width, canvas.height);
-
-    // context.clearRect(0, 0, context.canvas.width, context.canvas.height);
-    // context.fillStyle = bgColor;
-    // context.fillRect(0, 0, canvas.width, canvas.height);
-    frameCount++;
 
     dots.forEach(dot => {
       let neighbors = dots

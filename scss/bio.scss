@@ -13,8 +13,9 @@
   #header {
     font-size: 3em;
     letter-spacing: 2px;
-    height: 10vh;
-    margin: 0 10px;
+    min-height: 10vh;
+    margin: 10px auto;
+    text-align: center;
     #big-k,
     #big-g {
       font-size: 2em;
@@ -30,6 +31,14 @@
         padding: 5px 0;
       }
     }
+
+    #headshot {
+
+    }
+
+    #soft-skills {
+        
+    }
   }
 
   #bio-text {
@@ -39,8 +48,7 @@
     font-size: 1.5em;
     line-height: 1.2em;
     padding: 10px;
-    margin: 10px;
-    width: 100%;
+    margin: 10px auto;
 
     p {
       margin: 15px 0;
@@ -61,6 +69,11 @@
     margin: auto;
     #badges {
       display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding:10px;
+      width: 70%;
+      margin: 0 auto;
       .badge {
         font-size: 2.5em;
         margin: 0 2px;
@@ -81,7 +94,11 @@
   }
 
   @media only screen and (min-width: 700px) {
-    #bio {
+    #tech {
+
+        #badges {
+            width: 100%;
+        }
     }
   }
 }
