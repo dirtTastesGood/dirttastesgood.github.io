@@ -14,7 +14,7 @@ const softSkills = () => {
     'Resilient',
     'Perseverant',
     'Lifelong Learner',
-    'Father',
+    'Loving Father',
     'Adaptable',
     'Patient',
     'Compassionate',
