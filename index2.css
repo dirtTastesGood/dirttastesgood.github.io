@@ -1,3 +1,91 @@
+#bio {
+  background-color: #b5bab8;
+  border-bottom: #393e44 10px dotted;
+  border-top: #30343fff 10px dotted;
+  display: flex;
+  font-family: 'Righteous', 'sans-serif';
+  flex-wrap: wrap;
+  min-height: 100vh;
+  padding-top: 5vh;
+}
+
+#bio #header {
+  font-size: 3em;
+  letter-spacing: 2px;
+  height: 10vh;
+  margin: 0 10px;
+}
+
+#bio #header #big-k,
+#bio #header #big-g {
+  font-size: 2em;
+}
+
+#bio #header #profession {
+  font-size: 0.5em;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+#bio #header #profession #where-from {
+  font-size: 0.9em;
+  padding: 5px 0;
+}
+
+#bio #bio-text {
+  text-align: center;
+  background-color: #cfd3d1;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+  line-height: 1.2em;
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+}
+
+#bio #bio-text p {
+  margin: 15px 0;
+}
+
+#bio #bio-text #social-links {
+  padding: 30px;
+}
+
+#bio #bio-text #social-links .social-link {
+  font-size: 5rem;
+}
+
+#bio #bio-text #social-links .social-link:hover {
+  color: #335c67ff;
+}
+
+#bio #tech {
+  margin: auto;
+}
+
+#bio #tech #badges {
+  display: flex;
+}
+
+#bio #tech #badges .badge {
+  font-size: 2.5em;
+  margin: 0 2px;
+}
+
+#bio #tech #badges #django-badge {
+  font-size: 3em;
+}
+
+#bio #tech #github-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#bio #tech #github-info #stats {
+  margin-left: auto;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -116,92 +204,82 @@ a {
   }
 }
 
-#bio {
-  background-color: #b5bab8;
-  border-bottom: #393e44 10px dotted;
-  border-top: #30343fff 10px dotted;
+#projects {
+  align-items: center;
+  background-color: #393e44;
+  border-bottom: #949497 10px dotted;
+  border-top: #b5bab8 10px dotted;
   display: flex;
-  font-family: 'Righteous', 'sans-serif';
-  flex-wrap: wrap;
+  flex-direction: column;
   min-height: 100vh;
-  padding-top: 5vh;
+  padding: 20px 0;
+  position: relative;
 }
 
-#bio #header {
-  font-size: 3em;
-  letter-spacing: 2px;
-  height: 10vh;
-  margin: 0 10px;
+#projects #projects-bg {
+  margin-top: 20px;
 }
 
-#bio #header #big-k,
-#bio #header #big-g {
-  font-size: 2em;
+#projects .projects-header {
+  font-family: Righteous;
+  font-size: 3.5rem;
+  align-self: flex-start;
 }
 
-#bio #header #profession {
-  font-size: 0.5em;
-  letter-spacing: 1px;
-  margin-top: 10px;
+#projects .projects-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  position: absolute;
+  padding: 25px;
+  width: 95vw;
 }
 
-#bio #header #profession #where-from {
-  font-size: 0.9em;
-  padding: 5px 0;
-}
-
-#bio #bio-text {
-  text-align: center;
-  background-color: #cfd3d1;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.5em;
-  line-height: 1.2em;
-  padding: 10px;
+#projects .projects-container .project {
+  height: 43vh;
   margin: 10px;
+  max-height: 43vw;
+  max-width: 43vh;
+  padding: 2vw;
+  position: relative;
+  width: 43vw;
+}
+
+#projects .projects-container .project:after {
+  transition: all 0.3s ease-in-out;
+}
+
+#projects .projects-container .project:hover:after {
+  content: '';
+  background-color: black;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: 10px;
+  z-index: 1;
+  opacity: 0.8;
+  height: 100%;
   width: 100%;
 }
 
-#bio #bio-text p {
-  margin: 15px 0;
+#projects .projects-container .project img {
+  border: 10px solid black;
+  box-shadow: 0 0 15px black;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
 }
 
-#bio #bio-text #social-links {
-  padding: 30px;
-}
-
-#bio #bio-text #social-links .social-link {
-  font-size: 5rem;
-}
-
-#bio #bio-text #social-links .social-link:hover {
-  color: #335c67ff;
-}
-
-#bio #tech {
-  margin: auto;
-}
-
-#bio #tech #badges {
-  display: flex;
-}
-
-#bio #tech #badges .badge {
-  font-size: 2.5em;
-  margin: 0 2px;
-}
-
-#bio #tech #badges #django-badge {
-  font-size: 3em;
-}
-
-#bio #tech #github-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#bio #tech #github-info #stats {
-  margin-left: auto;
+@media only screen and (min-width: 700px) {
+  #projects .project {
+    height: 20vh;
+    max-height: 20vw;
+    max-width: 20vh;
+    text-align: center;
+    width: 20vw;
+  }
 }
 
 .glow {
@@ -306,83 +384,5 @@ a {
   }
   #splash .mandala-container .initials {
     font-size: 9em;
-  }
-}
-
-#projects {
-  align-items: center;
-  background-color: #393e44;
-  border-bottom: #949497 10px dotted;
-  border-top: #b5bab8 10px dotted;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  padding: 20px 0;
-  position: relative;
-}
-
-#projects #projects-bg {
-  margin-top: 20px;
-}
-
-#projects .projects-header {
-  font-family: Righteous;
-  font-size: 3.5rem;
-  align-self: flex-start;
-}
-
-#projects .projects-container {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: center;
-  position: absolute;
-  padding: 25px;
-  width: 95vw;
-}
-
-#projects .projects-container .project {
-  height: 43vh;
-  margin: 10px;
-  max-height: 43vw;
-  max-width: 43vh;
-  padding: 2vw;
-  position: relative;
-  width: 43vw;
-}
-
-#projects .projects-container .project:after {
-  transition: all 0.3s ease-in-out;
-}
-
-#projects .projects-container .project:hover:after {
-  content: '';
-  background-color: black;
-  border-radius: 50%;
-  display: block;
-  position: absolute;
-  top: 10px;
-  z-index: 1;
-  opacity: 0.8;
-  height: 100%;
-  width: 100%;
-}
-
-#projects .projects-container .project img {
-  border: 10px solid black;
-  box-shadow: 0 0 15px black;
-  border-radius: 50%;
-  height: 100%;
-  width: 100%;
-}
-
-@media only screen and (min-width: 700px) {
-  #projects .project {
-    height: 20vh;
-    max-height: 20vw;
-    max-width: 20vh;
-    text-align: center;
-    width: 20vw;
   }
 }
